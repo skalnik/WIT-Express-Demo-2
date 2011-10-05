@@ -30,7 +30,8 @@ app.configure('production', function(){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Express'
+    title: 'Express',
+    messages: ['foo', 'bar', 'baz'],
   });
 });
 
