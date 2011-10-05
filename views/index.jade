@@ -1,5 +1,9 @@
 h1= title
 p Welcome to #{title}
 
+form(action='/', method='post')
+  label(for='message_input')
+  input(type='text', name='message')#message_input
+
 each message in messages
   p= message
