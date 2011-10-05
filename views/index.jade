@@ -3,6 +3,7 @@ p Welcome to #{title}
 
 form(action='/', method='post')
   input(type='text', name='message', placeholder='Message')
+  input(type='submit', value='Send!')
 
 each message in messages
   p= message
