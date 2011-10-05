@@ -28,15 +28,17 @@ app.configure('production', function(){
 
 // Routes
 
+var messages = [];
+
 app.get('/', function(req, res){
   res.render('index', {
     title: 'Express',
-    messages: ['foo', 'bar', 'baz'],
+    messages: messages,
   });
 });
 
 app.post('/', function(req, res){
-  console.log(req.body);
+  messages.unshift(req.body.message);
   res.redirect('/');
 });
 
